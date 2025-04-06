@@ -60,29 +60,24 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-    word-break: break-word;
+    flex-wrap: nowrap;           /* prevent wrapping */
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
     border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .list li span {
+    flex: 1;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
   
   .list li button {
     white-space: nowrap;
-    margin-left: 0.5rem;
-    margin-top: 0.5rem;
+    flex-shrink: 0;
   }
   
-  @media (max-width: 500px) {
-    .list li {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .list li button {
-      margin-left: 0;
-      margin-right: 0.5rem;
-    }
   
     .add {
       display: block;
@@ -93,5 +88,5 @@ body {
     input {
       width: 100%;
     }
-  }
+  
   
